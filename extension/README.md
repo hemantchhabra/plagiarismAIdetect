@@ -1,101 +1,73 @@
 # Plagiarism & AI Content Checker - Chrome Extension
 
-A powerful Chrome extension that helps detect AI-generated content and potential plagiarism in selected text across any website.
+A powerful Chrome extension that helps you detect AI-generated content and potential plagiarism in selected text from any webpage.
 
 ## Features
 
-- **Right-click Analysis**: Select text on any webpage, right-click, and choose "Plagiarism & AI Content Checker"
-- **Instant Detection**: Quickly analyze text for AI generation patterns and plagiarism
-- **Detailed Results**: Get percentage scores and highlighted segments showing different content types
-- **Clean Interface**: Professional popup design with easy-to-understand results
-- **Cross-site Compatibility**: Works on all websites and web pages
+- 🔍 **Right-click Context Menu**: Select text on any webpage and analyze it directly
+- 🤖 **AI Content Detection**: Identifies potentially AI-generated text segments
+- 📋 **Plagiarism Detection**: Checks for potential plagiarized content
+- 📊 **Detailed Analysis**: Shows confidence scores and highlights suspicious segments
+- 🎯 **Easy to Use**: Simple popup interface with instant results
 
 ## Installation
 
-### From Chrome Web Store (Recommended)
-1. Visit the Chrome Web Store
-2. Search for "Plagiarism & AI Content Checker"
-3. Click "Add to Chrome"
-4. Confirm installation
+### For Development/Testing:
 
-### Manual Installation (Developer Mode)
-1. Download or clone this repository
-2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable "Developer mode" in the top-right corner
-4. Click "Load unpacked" and select the `extension` folder
-5. The extension will be installed and ready to use
+1. Download or clone this extension folder
+2. Open Chrome and go to `chrome://extensions/`
+3. Enable "Developer mode" in the top right
+4. Click "Load unpacked" and select the extension folder
+5. The extension icon should appear in your Chrome toolbar
 
-## How to Use
+### Usage:
 
-### Method 1: Context Menu (Recommended)
-1. Select any text on a webpage
-2. Right-click to open the context menu
-3. Click "Plagiarism & AI Content Checker"
-4. The extension popup will open with your selected text ready for analysis
-5. Click "Analyze Text" or wait for automatic analysis
+1. **Method 1 - Context Menu**:
+   - Select any text on a webpage
+   - Right-click and choose "Plagiarism & AI Content Checker"
+   - The extension will open with your selected text pre-loaded
 
-### Method 2: Manual Input
-1. Click the extension icon in the Chrome toolbar
-2. Paste or type your text in the input area
-3. Click "Analyze Text" to start the analysis
-4. Review the detailed results
+2. **Method 2 - Extension Popup**:
+   - Click the extension icon in your toolbar
+   - Paste or type text into the textarea
+   - Click "Analyze Text"
 
-## Results Explanation
+## Features Explained
 
-The extension provides three main scores:
+### Analysis Results:
+- **Original Content**: Percentage of text that appears to be originally written
+- **AI Generated**: Likelihood that text was created by AI tools
+- **Potential Plagiarism**: Probability that text was copied from other sources
 
-- **Original Content** (Green): Percentage of text that appears to be originally written
-- **AI Generated** (Orange): Percentage of text that shows patterns of AI generation
-- **Potentially Plagiarized** (Red): Percentage of text that may be copied from other sources
+### Detailed View:
+- Color-coded segments showing different content types
+- Confidence scores for each segment
+- Potential source URLs (when plagiarism is detected)
 
-## Privacy & Security
+## Files Structure:
+- `manifest.json` - Extension configuration
+- `background.js` - Handles context menu and storage
+- `content.js` - Manages text selection on webpages
+- `popup.html` - Extension popup interface
+- `popup.js` - Popup functionality and analysis logic
+- `icons/` - Extension icons in various sizes
 
-- **No Data Collection**: Your text is analyzed locally and never sent to external servers
-- **Secure Processing**: All analysis happens within your browser
-- **No Account Required**: Use the extension without signing up or providing personal information
+## Publishing to Chrome Web Store:
 
-## Technical Details
+1. Zip the entire extension folder
+2. Go to [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole/)
+3. Pay the one-time $5 developer fee (if not already paid)
+4. Upload your zip file
+5. Fill out the store listing information
+6. Submit for review
 
-- **Manifest Version**: 3 (Latest Chrome Extension standard)
-- **Permissions**: 
-  - `contextMenus`: For right-click menu integration
-  - `activeTab`: For accessing selected text on current page
-  - `storage`: For temporary text storage between context menu and popup
-- **Offline Capable**: Works without internet connection
+## Notes:
 
-## Development
+- Current version uses mock analysis for demonstration
+- Replace the `simulateAnalysis()` function with actual API calls to plagiarism/AI detection services
+- Consider implementing rate limiting and error handling for production use
+- Add authentication if using paid API services
 
-### Building for Chrome Web Store
+## Version History:
 
-1. Ensure all files are in the `extension/` folder
-2. Zip the contents of the `extension/` folder (not the folder itself)
-3. The zip file should contain: `manifest.json`, `background.js`, `content.js`, `popup.html`, `popup.js`, and `icons/` folder
-4. Upload the zip file to the Chrome Web Store Developer Dashboard
-
-### File Structure
-```
-extension/
-├── manifest.json       # Extension configuration
-├── background.js       # Service worker for context menu
-├── content.js         # Content script for text selection
-├── popup.html         # Extension popup interface
-├── popup.js           # Popup functionality
-├── icons/             # Extension icons
-│   ├── icon16.png
-│   ├── icon32.png
-│   ├── icon48.png
-│   └── icon128.png
-└── README.md          # This file
-```
-
-## Version History
-
-- **v1.0.0**: Initial release with context menu integration and text analysis
-
-## Support
-
-For issues or feature requests, please visit the Chrome Web Store listing or contact support.
-
-## License
-
-This extension is provided as-is for text analysis purposes. Please ensure you have the right to analyze any text you process.
+- v1.0.0 - Initial release with basic functionality
