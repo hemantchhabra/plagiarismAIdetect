@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Plagiarism and AI content created - detector
 
 ## Project info
 
