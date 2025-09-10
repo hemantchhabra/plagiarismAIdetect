@@ -47,6 +47,22 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "ai-generated": {
+          DEFAULT: "hsl(var(--ai-generated))",
+          foreground: "hsl(var(--ai-generated-foreground))",
+        },
+        plagiarized: {
+          DEFAULT: "hsl(var(--plagiarized))",
+          foreground: "hsl(var(--plagiarized-foreground))",
+        },
+        original: {
+          DEFAULT: "hsl(var(--original))",
+          foreground: "hsl(var(--original-foreground))",
+        },
+        uncertain: {
+          DEFAULT: "hsl(var(--uncertain))",
+          foreground: "hsl(var(--uncertain-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +73,17 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-analysis": "var(--gradient-analysis)",
+      },
+      boxShadow: {
+        analysis: "var(--shadow-analysis)",
+        card: "var(--shadow-card)",
+      },
+      transitionTimingFunction: {
+        smooth: "var(--transition-smooth)",
       },
       borderRadius: {
         lg: "var(--radius)",
